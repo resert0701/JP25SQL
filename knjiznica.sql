@@ -43,7 +43,8 @@ create table zakasnina (
 
 create table knjiznicar(
     knjiznicar_id int not null primary key auto_increment,
-    djelatnik varchar(50)
+    ime varchar(50),
+    prezime varchar(50)
 );
 
 create table posudba_knjiga(
