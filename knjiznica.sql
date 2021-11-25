@@ -56,7 +56,6 @@ create table posudba_knjiga(
 
 
 alter table posudba add foreign key (korisnik_id) references korisnik(korisnik_id);
---alter table posudba add foreign key (knjiga_id) references knjiga(knjiga_id);
 alter table zakasnina add foreign key (posudba_id) references posudba(posudba_id);
 alter table posudba add foreign key(knjiznicar_id) references knjiznicar(knjiznicar_id);
 alter table posudba_knjiga add foreign key(knjiga_id) references knjiga(knjiga_id);
