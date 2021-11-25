@@ -92,17 +92,17 @@ alter table posudba_knjiga add foreign key (posudba_id) references posudba(posud
 
 -- ----knjige
 
--- insert into knjiga(knjiga_id,naslov,autor,izdavac,kategorija,broj_primjeraka)
--- values (null,'Tajne njegovih inovacija','Carmine Gallo','Algoritam','Autobiografija',10);
+insert into knjiga(knjiga_id,naslov,autor,izdavac,kategorija,broj_primjeraka)
+values (null,'Tajne njegovih inovacija','Carmine Gallo','Algoritam','Autobiografija',10);
 
--- insert into knjiga(knjiga_id,naslov,autor,izdavac,kategorija,broj_primjeraka)
--- values (null,'Igra Prestolja','G.R.R.Martin','Školska knjiga','Fantasy',4);
+insert into knjiga(knjiga_id,naslov,autor,izdavac,kategorija,broj_primjeraka)
+values (null,'Igra Prestolja','G.R.R.Martin','Školska knjiga','Fantasy',4);
 
--- insert into knjiga(knjiga_id,naslov,autor,izdavac,kategorija,broj_primjeraka)
--- values (null,'Hyperion Cantos','Dan Simmons','Školska knjiga','SF',5);
+insert into knjiga(knjiga_id,naslov,autor,izdavac,kategorija,broj_primjeraka)
+values (null,'Hyperion Cantos','Dan Simmons','Školska knjiga','SF',5);
 
--- insert into knjiga(knjiga_id,naslov,autor,izdavac,kategorija,broj_primjeraka)
--- values (null,'Dina','Frank Herbert','Sfera','SF',20);
+insert into knjiga(knjiga_id,naslov,autor,izdavac,kategorija,broj_primjeraka)
+values (null,'Dina','Frank Herbert','Sfera','SF',20);
 
 -- --knjiznicari
 
