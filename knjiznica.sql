@@ -1,7 +1,7 @@
 drop database if exists knjiznica;
 create database knjiznica character set utf8;
 # otvoriti cmd i zaljepiti od znaka # do kraja - pripaziti na putanju
-# c:\xampp\mysql\bin\mysql -uknjiznica -pknjiznica --default_character_set=utf8 < d:\knjiznica.sql
+# C:\xampp\mysql\bin>mysql -uknjiznica -pknjiznica --default_character_set=utf8 < d:\JP25\JP25SQL\knjiznica.sql
 use knjiznica
 
 
@@ -105,11 +105,14 @@ values (null,'Dina','Frank Herbert','Sfera','SF',20);
 
 -- --knjiznicari
 
--- insert into knjiznicar (knjiznicar_id,djelatnik)
--- values (null,'Josip Horvat');
+insert into knjiznicar (knjiznicar_id,ime,prezime)
+values (null,'Josip','Horvat');
 
--- insert into knjiznicar (knjiznicar_id,djelatnik)
--- values (null,'Marija Brkić');
+insert into knjiznicar (knjiznicar_id,ime,prezime)
+values (null,'Marija','Dir');
+
+-- insert into knjiznicar (knjiznicar_id,ime,prezime)
+-- values (null,'Marija','Brkić');
 
 -- ---posudba
 
