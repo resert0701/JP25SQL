@@ -141,4 +141,9 @@ insert into posudba_knjiga(posudba_id,knjiga_id)values
 
 ---zakasnina
 
-
+insert into zakasnina (zakasnina_id,posudba_id,cijena)values
+(null,1,30),
+(null,2,null),
+(null,3,null),
+(null,4,null),
+(null,5,null);
