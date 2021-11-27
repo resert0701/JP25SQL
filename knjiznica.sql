@@ -113,7 +113,13 @@ insert into knjiga(knjiga_id,naslov,autor,izdavac,kategorija,broj_primjeraka)
 values (null,'Peti val','Yancey Rick','Sfera','SF',9);
 
 insert into knjiga(knjiga_id,naslov,autor,izdavac,kategorija,broj_primjeraka)
-values (null,'Djeca Dine','Frank Herbert','Školska knjiga ','SF',17);
+values (null,'Hobit','John Ronald Reuel Tolkien','Alogoritam','SF',3);
+
+insert into knjiga(knjiga_id,naslov,autor,izdavac,kategorija,broj_primjeraka)
+values (null,'Ono','Stephen King','Algoritam','Horror',12);
+
+insert into knjiga(knjiga_id,naslov,autor,izdavac,kategorija,broj_primjeraka)
+values (null,'Fahrenheit 451','Ray Bradbury','Algoritam','SF',7);
 
 -- --knjiznicari
 
@@ -146,6 +152,9 @@ values (null,3,2,1,'2021-11-25');
 insert into posudba (posudba_id,knjiznicar_id,knjiga_id,korisnik_id,datum_posudbe)
 values (null,3,4,9,'2021-11-25');
 
+insert into posudba (posudba_id,knjiznicar_id,knjiga_id,korisnik_id,datum_posudbe)
+values (null,1,9,13,'2021-11-27');
+
 --- posudba_knjiga
 insert into posudba_knjiga(posudba_id,knjiga_id)values 
 (1,3),
@@ -153,7 +162,8 @@ insert into posudba_knjiga(posudba_id,knjiga_id)values
 (3,2),
 (4,1),
 (5,2),
-(6,4);
+(6,4),
+(7,9);
 
 ---zakasnina
 
@@ -163,5 +173,9 @@ insert into zakasnina (zakasnina_id,posudba_id,cijena)values
 (null,3,null),
 (null,4,null),
 (null,5,null),
-(null,6,null);
+(null,6,null),
+(null,7,null);
 
+--view
+
+CREATE OR REPLACE VIEW zbirno AS select k.ime ,k.prezime,k2.naslov "knjiga",k2.autor ,p.datum_posudbe,p.datum_povrata,k2.broj_primjeraka,k3.ime "djelatnik ime",k3.prezime "djelatnik prezime",z.cijena  from korisnik k inner join posudba p on k.korisnik_id = p.korisnik_id  inner join posudba_knjiga pk on p.posudba_id = pk.posudba_id  inner join knjiga k2 on k2.knjiga_id =pk.knjiga_id  inner join knjiznicar k3 on k3.knjiznicar_id = p.knjiznicar_id  inner join zakasnina z on p.posudba_id=z.posudba_id ; 
