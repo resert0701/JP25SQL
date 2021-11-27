@@ -103,6 +103,18 @@ values (null,'Hyperion Cantos','Dan Simmons','Školska knjiga','SF',5);
 insert into knjiga(knjiga_id,naslov,autor,izdavac,kategorija,broj_primjeraka)
 values (null,'Dina','Frank Herbert','Sfera','SF',20);
 
+insert into knjiga(knjiga_id,naslov,autor,izdavac,kategorija,broj_primjeraka)
+values (null,'Druga fondacija','Isaac Asimov','Sfera','Školska knjiga',8);
+
+insert into knjiga(knjiga_id,naslov,autor,izdavac,kategorija,broj_primjeraka)
+values (null,'Fondacija i carstvo','Isaac Asimov','Sfera','SF',5);
+
+insert into knjiga(knjiga_id,naslov,autor,izdavac,kategorija,broj_primjeraka)
+values (null,'Peti val','Yancey Rick','Sfera','SF',9);
+
+insert into knjiga(knjiga_id,naslov,autor,izdavac,kategorija,broj_primjeraka)
+values (null,'Djeca Dine','Frank Herbert','Školska knjiga ','SF',17);
+
 -- --knjiznicari
 
 insert into knjiznicar (knjiznicar_id,ime,prezime)
