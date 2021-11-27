@@ -1,7 +1,7 @@
 drop database if exists knjiznica;
 create database knjiznica character set utf8;
 # otvoriti cmd i zaljepiti od znaka # do kraja - pripaziti na putanju
-# C:\xampp\mysql\bin>mysql -uknjiznica -pknjiznica --default_character_set=utf8 < d:\JP25\JP25SQL\knjiznica.sql
+# C:\xampp\mysql\bin\mysql -uknjiznica -pknjiznica --default_character_set=utf8 < d:\JP25\JP25SQL\knjiznica.sql
 use knjiznica
 
 
@@ -131,6 +131,9 @@ values (null,1,1,15,'2021-11-19');
 insert into posudba (posudba_id,knjiznicar_id,knjiga_id,korisnik_id,datum_posudbe)
 values (null,3,2,1,'2021-11-25');
 
+insert into posudba (posudba_id,knjiznicar_id,knjiga_id,korisnik_id,datum_posudbe)
+values (null,3,4,9,'2021-11-25');
+
 --- posudba_knjiga
 insert into posudba_knjiga(posudba_id,knjiga_id)values 
 (1,3),
@@ -147,3 +150,4 @@ insert into zakasnina (zakasnina_id,posudba_id,cijena)values
 (null,3,null),
 (null,4,null),
 (null,5,null);
+
