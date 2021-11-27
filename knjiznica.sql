@@ -140,7 +140,8 @@ insert into posudba_knjiga(posudba_id,knjiga_id)values
 (2,4),
 (3,2),
 (4,1),
-(5,2);
+(5,2),
+(6,4);
 
 ---zakasnina
 
@@ -149,5 +150,6 @@ insert into zakasnina (zakasnina_id,posudba_id,cijena)values
 (null,2,null),
 (null,3,null),
 (null,4,null),
-(null,5,null);
+(null,5,null),
+(null,6,null);
 
