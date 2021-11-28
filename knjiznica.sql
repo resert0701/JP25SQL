@@ -170,7 +170,7 @@ insert into posudba_knjiga(posudba_id,knjiga_id)values
 insert into zakasnina (zakasnina_id,posudba_id,cijena)values
 (null,1,30),
 (null,2,null),
-(null,3,null),
+(null,3,6),
 (null,4,null),
 (null,5,null),
 (null,6,null),
@@ -178,4 +178,9 @@ insert into zakasnina (zakasnina_id,posudba_id,cijena)values
 
 --view
 
-CREATE OR REPLACE VIEW zbirno AS select k.ime ,k.prezime,k2.naslov "knjiga",k2.autor ,p.datum_posudbe,p.datum_povrata,k2.broj_primjeraka,k3.ime "djelatnik ime",k3.prezime "djelatnik prezime",z.cijena  from korisnik k inner join posudba p on k.korisnik_id = p.korisnik_id  inner join posudba_knjiga pk on p.posudba_id = pk.posudba_id  inner join knjiga k2 on k2.knjiga_id =pk.knjiga_id  inner join knjiznicar k3 on k3.knjiznicar_id = p.knjiznicar_id  inner join zakasnina z on p.posudba_id=z.posudba_id ; 
+CREATE OR REPLACE VIEW podatci AS select k.ime ,k.prezime,k.adresa ,k.mijesto ,k.broj_mobitela ,k2.naslov "knjiga",k2.autor ,p.datum_posudbe,p.datum_povrata,k3.ime "djelatnik ime",k3.prezime "djelatnik prezime",z.cijena
+from korisnik k inner join posudba p on k.korisnik_id = p.korisnik_id  
+inner join posudba_knjiga pk on p.posudba_id = pk.posudba_id  
+inner join knjiga k2 on k2.knjiga_id =pk.knjiga_id  
+inner join knjiznicar k3 on k3.knjiznicar_id = p.knjiznicar_id  
+inner join zakasnina z on p.posudba_id=z.posudba_id ; 
